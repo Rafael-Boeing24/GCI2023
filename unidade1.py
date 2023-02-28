@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 @st.cache_data
-def load_database():
+def reload_database():
     return pd.read.csv('brasil_estados.csv')
 
 st.title('Meu primeiro App - GCI')
@@ -17,4 +17,8 @@ st.dataframe(estados)
 dados, estatistica = st.tabs(['Dados', 'Estatística Descritiva'])
 
 with dados:
-    st.dataframe(estados)
+    regiao = st.selectbox(
+        'Selecione a Região:',
+        estados['regiao_nome'].unique()
+    )
+    st.dataframe(estados[estados['regiao_nome'] == regiao])
