@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 @st.cache_data
-def reload_database():
+def load_database():
     return pd.read.csv('brasil_estados.csv')
 
 st.title('Meu primeiro App - GCI')
