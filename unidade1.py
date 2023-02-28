@@ -26,6 +26,6 @@ with dados:
 with estatistica:
     variavel = st.selectbox(
         'Selecioine a variável:',
-        ['area', 'populacao', 'idh', 'matriculas']
+        ['area', 'populacao', 'idh', 'matricula']
     )
     st.table(estados[variavel].describe())
