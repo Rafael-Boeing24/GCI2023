@@ -1,4 +1,4 @@
-import pandas as pandas
+import pandas as pd
 import numpy as np
 import streamlit as st
 import altair as alt
@@ -7,7 +7,7 @@ import seaborn as sns
 
 @st.cache_data
 def load_database():
-    return pd.read.csv('brasil_estados.csv')
+    return pd.read_csv('brasil_estados.csv')
 
 st.title('Meu primeiro App - GCI')
 
