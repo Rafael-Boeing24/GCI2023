@@ -1,3 +1,6 @@
-import xlrd
+import pandas as pd
+import streamlit as st
 
-xlrd.open_workbook_xls()
+regiao = pd.read_excel('BRCidadesRegiao.xlsx')
+
+st.dataframe(regiao)
